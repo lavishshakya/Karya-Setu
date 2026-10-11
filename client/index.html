@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Karya Setu connects daily-wage and skilled workers with verified employers — AI job matching, digital attendance, payment tracking and government scheme support." />
+    <meta name="theme-color" content="#0b7a94" />
+    <title>Karya Setu · कार्य सेतु</title>
+    <script>
+      // Apply the saved/system theme before first paint to avoid a light→dark flash.
+      try {
+        var saved = localStorage.getItem('ks_theme')
+        var dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light'
+      } catch (e) {
+        document.documentElement.dataset.theme = 'light'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
